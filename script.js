@@ -11,3 +11,5 @@ function mostrarmensaje() {
         mensaje.style.transform= "translatey (0)";
     }, 50);
 }
+
+
