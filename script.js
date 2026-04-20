@@ -10,5 +10,4 @@ function mostrarmensaje() {
         mensaje.style.opacity="1";
         mensaje.style.transform= "translatey (0)";
     }, 50);
-
 }

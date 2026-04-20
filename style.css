@@ -52,6 +52,15 @@ button{
 button:active{
     transform:scale(0.95)
 }
+#mensaje {
+    display:none;
+    opacity:0;
+    transform:translatey (-10px);
+    transition:all 0.5s easc;
+    font-weight:bold;
+    color:blue #2ecc71;
+    margin-top:10px;
+}
 
 
 
