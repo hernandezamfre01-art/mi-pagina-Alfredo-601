@@ -1,15 +1,79 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Mi página web</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/> <!-- asegúrate que el archivo se llame style.css -->
+    <!-- Importar Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Botón flotante estilo bolita */
+        .btn-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-flotante:hover {
+            transform: scale(1.1);
+        }
+
+        /* Botón de Facebook */
+        .facebook {
+            background-color: #1877f2;
+        }
+
+        /* Botón de WhatsApp */
+        .whatsapp {
+            background-color: #25d366;
+            right: 90px; /* separa el botón de Facebook */
+        }
+
+        /* Estilo para el modo oscuro */
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .dark-mode header,
+        .dark-mode nav,
+        .dark-mode section,
+        .dark-mode footer {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+    
+
+    </style>
+
+    <!-- Flecha para volver al inicio -->
+<a href="#top" class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+
 </head>
 
 <body>
     <header>
         <h1>Mi página web</h1>
+        <!-- Botón de modo oscuro dentro del body -->
+        <button id="btnDarkMode" onclick="toggleDarkMode()">Modo oscuro</button>
     </header>
 
     <nav>
@@ -19,27 +83,73 @@
 
     <section id="sobre-mi">
         <h2>Sobre mí</h2>
-        <p>mi nombre Alfredo Salinas </p>
-        <h3>estudio mecanica </h3>
-            <h3>me interesa conocer mas sobre el pec</h3>
-            <h3>mecanico profesional</h3>
-        </p>
-        <img src="img src/image.png" alt="sobre mí">
+        <p>Mi nombre es David García Padilla</p>
+        <h3>Estudio odontología</h3>
+        <h3>Me interesa conocer más sobre el PEC</h3>
+        <h3>Odontólogo profesional</h3>
+
+        <!-- Botón y mensaje justo arriba de la primera imagen -->
+        <button id="btnMensaje" onclick="toggleMensaje('mensaje','btnMensaje','cuida y protege a los animales.','Mostrar mensaje','Ocultar mensaje')">
+            Mostrar mensaje
+        </button>
+        <p id="mensaje" style="display:none;"></p>
+
+        <button id="btnMensaje2" onclick="toggleMensaje('mensaje2','btnMensaje2','hola como estan.','Mostrar otro mensaje','Ocultar mensaje')">
+            Mostrar otro mensaje
+        </button>
+        <p id="mensaje2" style="display:none;"></p>
+
+        <!-- Primera imagen -->
+        <img src="img/odontólogo (3).png" alt="sobre mí">
     </section>
 
     <section id="PEC">
         <h2>Sobre el PEC</h2>
-        <p id="mensaje" <style="display:none;"> </p>
-         <button onclink="mostrarmensaje()">mostrar mensaje</button>
-        <img src="img src/banner.png" alt="imagen que muestra sobre el proyecto huellas" width="1200" height="600">
+        <img src="img/huellas (2).png" alt="imagen que muestra sobre el proyecto huellas" width="1200" height="600">
         <p>Proyecto Huellas: cuidado animal y salud comunitaria</p>
     </section>
 
     <footer>
-        <p>2026 - alfredo</p>
-    
+        <p>2026 - David</p>
     </footer>
-    <scrip src="script.js" <>/scrip>
-</body>
 
+    <!-- Botones flotantes con logos -->
+    <a href="https://www.facebook.com/tuusuario" target="_blank" class="btn-flotante facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-flotante whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Función genérica para alternar mensajes
+        function toggleMensaje(idMensaje, idBoton, textoMostrar, textoBotonMostrar, textoBotonOcultar) {
+            const mensaje = document.getElementById(idMensaje);
+            const boton = document.getElementById(idBoton);
+
+            if (mensaje.style.display === "none" || mensaje.style.display === "") {
+                mensaje.innerText = textoMostrar;
+                mensaje.style.display = "block";
+                boton.innerText = textoBotonOcultar;
+            } else {
+                mensaje.style.display = "none";
+                boton.innerText = textoBotonMostrar;
+            }
+        }
+
+        // Función para alternar entre modo claro y oscuro
+        function toggleDarkMode() {
+            const body = document.body;
+            const boton = document.getElementById("btnDarkMode");
+
+            body.classList.toggle("dark-mode");
+
+            if (body.classList.contains("dark-mode")) {
+                boton.innerText = "Modo claro";
+            } else {
+                boton.innerText = "Modo oscuro";
+            }
+        }
+    </script>
+</body>
 </html>
