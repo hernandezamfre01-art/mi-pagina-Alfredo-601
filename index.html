@@ -2,304 +2,295 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi página web</title>
-
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
+    <link rel="stylesheet" href="style.css"/> <!-- asegúrate que el archivo se llame style.css -->
+    <!-- Importar Font Awesome para los íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        /* ESTILOS GENERALES */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #000;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        header {
-            background: #007bff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        /* BOTONES */
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            background: #007bff;
-            color: white;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-
-        /* FORMULARIO */
-        form {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            width: 300px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        /* MODO OSCURO */
-        .dark-mode {
-            background: #121212;
-            color: white;
-        }
-
-        .dark-mode header,
-        .dark-mode nav,
-        .dark-mode section,
-        .dark-mode form,
-        .dark-mode footer {
-            background: #1e1e1e;
-            color: white;
-        }
-
-        .dark-mode input,
-        .dark-mode textarea {
-            background: #333;
-            color: white;
-            border: 1px solid #555;
-        }
-
-        /* BOTONES FLOTANTES */
+        /* Botón flotante estilo bolita */
         .btn-flotante {
             position: fixed;
             bottom: 20px;
+            right: 20px;
             width: 60px;
             height: 60px;
             border-radius: 50%;
             border: none;
             color: white;
             font-size: 28px;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             transition: transform 0.2s;
+            text-decoration: none;
         }
 
         .btn-flotante:hover {
             transform: scale(1.1);
         }
 
+        /* Botón de Facebook */
         .facebook {
-            right: 20px;
-            background: #1877f2;
+            background-color: #1877f2;
         }
 
+        /* Botón de WhatsApp */
         .whatsapp {
-            right: 90px;
-            background: #25d366;
+            background-color: #25d366;
+            right: 90px; /* separa el botón de Facebook */
         }
 
-        /* FLECHA ARRIBA */
-        .arrow-up {
-            position: fixed;
-            bottom: 90px;
-            right: 20px;
-            background: #333;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 20px;
+        /* Estilo para el modo oscuro */
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
         }
+
+        .dark-mode header,
+        .dark-mode nav,
+        .dark-mode section,
+        .dark-mode footer {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+    
+
     </style>
+
+    <!-- Flecha para volver al inicio -->
+<a href="#top" class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+
 </head>
 
-<body id="top">
-
-    <!-- HEADER -->
+<body>
     <header>
         <h1>Mi página web</h1>
-
-        <button id="btnDarkMode" onclick="toggleDarkMode()">
-            Modo oscuro
-        </button>
+        <!-- Botón de modo oscuro dentro del body -->
+        <button id="btnDarkMode" onclick="toggleDarkMode()">Modo oscuro</button>
     </header>
 
-    <!-- MENÚ -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modo Oscuro</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Estilo del modo oscuro */
+    .dark {
+      background: #121212;
+      color: #ffffff;
+    }
+
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Modo Oscuro en HTML</h1>
+    <p>Presiona el botón para cambiar el tema.</p>
+
+    <button onclick="toggleMode()">
+      Cambiar tema
+    </button>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
     <nav>
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#pec">Proyecto PEC</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#PEC">Proyecto PEC</a>
     </nav>
 
-    <!-- SOBRE MÍ -->
     <section id="sobre-mi">
         <h2>Sobre mí</h2>
-
-        <p>Mi nombre es Alfredo Salinas Hernández.</p>
-        <h3>Estudio Mecánica</h3>
+        <p>Mi nombre es Alfredo salinas hernandez</p>
+        <h3>Estudio Mecanica</h3>
         <h3>Me interesa conocer más sobre el PEC</h3>
-        <h3>Mecánico profesional</h3>
+        <h3>Mecanico profesional</h3>
 
-        <!-- MENSAJE 1 -->
-        <button id="btnMensaje"
-            onclick="toggleMensaje('mensaje','btnMensaje','Cuida y protege a los animales.','Mostrar mensaje','Ocultar mensaje')">
+        <!-- Botón y mensaje justo arriba de la primera imagen -->
+        <button id="btnMensaje" onclick="toggleMensaje('mensaje','btnMensaje','cuida y protege a los animales.','Mostrar mensaje','Ocultar mensaje')">
             Mostrar mensaje
         </button>
-
         <p id="mensaje" style="display:none;"></p>
 
-        <!-- MENSAJE 2 -->
-        <button id="btnMensaje2"
-            onclick="toggleMensaje('mensaje2','btnMensaje2','Hola, ¿cómo están?','Mostrar otro mensaje','Ocultar mensaje')">
+        <button id="btnMensaje2" onclick="toggleMensaje('mensaje2','btnMensaje2','hola como estan.','Mostrar otro mensaje','Ocultar mensaje')">
             Mostrar otro mensaje
         </button>
-
         <p id="mensaje2" style="display:none;"></p>
 
-        <!-- IMAGEN -->
-        <img src="banner.png" alt="Sobre mí">
+        <!-- Primera imagen -->
+        <img src="img src/banner.png" alt="sobre mí">
     </section>
 
-    <!-- PEC -->
-    <section id="pec">
+    <section id="PEC">
         <h2>Sobre el PEC</h2>
-
-        <img src="images.jfif"
-            alt="Imagen sobre el proyecto Huellas"
-            width="800">
-
-        <p>Proyecto Huellas: cuidado animal y salud comunitaria.</p>
+        <img src="img src/images.jfif" alt="imagen que muestra sobre el proyecto huellas" width="1200" height="600">
+        <p>Proyecto Huellas: cuidado animal y salud comunitaria</p>
     </section>
 
-    <!-- FORMULARIO -->
-    <section id="contacto">
-        <h2>Formulario de contacto</h2>
-
-        <form>
-            <label>Nombre:</label>
-            <input type="text" placeholder="Ingresa tu nombre" required>
-
-            <label>Correo:</label>
-            <input type="email" placeholder="Ingresa tu correo" required>
-
-            <label>Mensaje:</label>
-            <textarea rows="4" placeholder="Escribe tu mensaje"></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <!-- FOOTER -->
     <footer>
         <p>2026 - Alfredo</p>
     </footer>
 
-    <!-- BOTÓN FACEBOOK -->
-    <a href="https://www.facebook.com/" target="_blank"
-        class="btn-flotante facebook">
+    <!-- Botones flotantes con logos -->
+    <a href="https://www.facebook.com/tuusuario" target="_blank" class="btn-flotante facebook">
         <i class="fab fa-facebook-f"></i>
     </a>
-
-    <!-- BOTÓN WHATSAPP -->
-    <a href="https://wa.me/5210000000000" target="_blank"
-        class="btn-flotante whatsapp">
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-flotante whatsapp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- FLECHA ARRIBA -->
-    <a href="#top" class="arrow-up">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JAVASCRIPT -->
     <script>
-
-        // MOSTRAR / OCULTAR MENSAJES
+        // Función genérica para alternar mensajes
         function toggleMensaje(idMensaje, idBoton, textoMostrar, textoBotonMostrar, textoBotonOcultar) {
-
             const mensaje = document.getElementById(idMensaje);
             const boton = document.getElementById(idBoton);
 
             if (mensaje.style.display === "none" || mensaje.style.display === "") {
-
                 mensaje.innerText = textoMostrar;
                 mensaje.style.display = "block";
                 boton.innerText = textoBotonOcultar;
-
             } else {
-
                 mensaje.style.display = "none";
                 boton.innerText = textoBotonMostrar;
             }
         }
 
-        // MODO OSCURO
+        // Función para alternar entre modo claro y oscuro
         function toggleDarkMode() {
-
-            document.body.classList.toggle("dark-mode");
-
+            const body = document.body;
             const boton = document.getElementById("btnDarkMode");
 
-            if (document.body.classList.contains("dark-mode")) {
+            body.classList.toggle("dark-mode");
+
+            if (body.classList.contains("dark-mode")) {
                 boton.innerText = "Modo claro";
             } else {
                 boton.innerText = "Modo oscuro";
             }
         }
+   
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario HTML</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Contacto</h2>
+
+    <label>Nombre:</label>
+    <input type="text" placeholder="Ingresa tu nombre" required>
+
+    <label>Correo:</label>
+    <input type="email" placeholder="Ingresa tu correo" required>
+
+    <label>Mensaje:</label>
+    <textarea rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
+   
+
+   
     </script>
-
 </body>
 </html>
