@@ -215,82 +215,39 @@
                 boton.innerText = "Modo oscuro";
             }
         }
-   
-   <!DOCTYPE html>
+  
+<body>
+
+
+
+    <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario HTML</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    form {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 15px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-  </style>
+  <title>Formulario</title>
 </head>
 <body>
 
-  <form>
-    <h2>Contacto</h2>
+  <h2>Formulario de contacto</h2>
 
-    <label>Nombre:</label>
-    <input type="text" placeholder="Ingresa tu nombre" required>
+  <form action="/enviar" method="POST">
 
-    <label>Correo:</label>
-    <input type="email" placeholder="Ingresa tu correo" required>
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
 
-    <label>Mensaje:</label>
-    <textarea rows="4" placeholder="Escribe tu mensaje"></textarea>
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea><br><br>
 
     <button type="submit">Enviar</button>
+
   </form>
 
 </body>
 </html>
-   
-
-   
     </script>
 </body>
 </html>
